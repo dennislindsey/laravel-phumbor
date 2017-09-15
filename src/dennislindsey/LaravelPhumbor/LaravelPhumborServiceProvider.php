@@ -33,7 +33,7 @@ class LaravelPhumborServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('phumbor', function ($app) {
-            return \Thumbor\Url\BuilderFactory::construct(config('laravel5-phumbor.server'), config('laravel5-phumbor.key'));
+            return \Thumbor\Url\BuilderFactory::construct(config('laravel-phumbor.server'), config('laravel-phumbor.key'));
         });
     }
 
