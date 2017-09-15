@@ -1,27 +1,38 @@
 {
-    "name": "r0bdiablo/laravel5-phumbor",
+    "name": "dennislindsey/laravel-phumbor",
     "description": "Laravel 5 package adding support for the Phumbor PHP library for Thumbor.",
-	"homepage": "https://github.com/r0bdiablo/laravel5-phumbor",
+	"homepage": "https://github.com/r0bdiablo/laravel-phumbor",
 	"license": "MIT",
 	"keywords": ["laravel", "phumbor", "thumbor"],
     "authors": [
         {
-            "name": "Robert Pettique",
-            "email": "robert@rkcreative.co"
+            "name": "Dennis Lindsey",
+            "email": "dennis@dennislindsey.com"
         }
     ],
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=7.0.0",
         "illuminate/support": "5.*",
-        "99designs/phumbor": "1.2.*"
+        "99designs/phumbor": "1.2.*",
+        "laravel/framework": "5.5.*"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "^4.0"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
         "psr-0": {
-            "R0bdiabl0\\Laravel5Phumbor": "src/"
+            "dennislindsey\\LaravelPhumbor": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "dennislindsey\\LaravelPhumbor\\LaravelPhumborServiceProvider"
+            ],
+            "aliases": {
+                "Debugbar": "dennislindsey\\LaravelPhumbor\\Phumbor"
+            }
+        }
+    }
 }
