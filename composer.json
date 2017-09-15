@@ -31,7 +31,7 @@
                 "dennislindsey\\LaravelPhumbor\\LaravelPhumborServiceProvider"
             ],
             "aliases": {
-                "Phumbor": "dennislindsey\\LaravelPhumbor\\Phumbor"
+                "Phumbor": "dennislindsey\\LaravelPhumbor\\Facades\\Phumbor"
             }
         }
     }
